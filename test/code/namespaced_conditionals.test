@@ -13,8 +13,12 @@ namespace Bar {
 }
 -----
 Block#1
+    Expr_ConstFetch
+        nsName: LITERAL('Foo\\true')
+        name: LITERAL('true')
+        result: TEMP(#1)
     Stmt_JumpIf
-        cond: LITERAL(true)
+        cond: TEMP(#1)
         if: Block#2
         else: Block#3
 
@@ -28,8 +32,12 @@ Block#2
 Block#3
     Parent: Block#2
     Parent: Block#1
+    Expr_ConstFetch
+        nsName: LITERAL('Bar\\false')
+        name: LITERAL('false')
+        result: TEMP(#2)
     Stmt_JumpIf
-        cond: LITERAL(false)
+        cond: TEMP(#2)
         if: Block#4
         else: Block#5
 

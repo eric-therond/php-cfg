@@ -25,7 +25,7 @@ use PHPCfg\CodeTest;
 class PrinterProtobufTest extends TestCase
 {
     #[DataProvider('provideTestParseAndDump')]
-    public function testParseAndDump($code, $expectedDump)
+    public function testParseAndDump($code, $expectedDump, $file)
     {
         $astTraverser = new PhpParser\NodeTraverser();
         $astTraverser->addVisitor(new PhpParser\NodeVisitor\NameResolver());
@@ -45,19 +45,12 @@ class PrinterProtobufTest extends TestCase
 
         $jsonResult = json_encode(json_decode($result->serializeToJsonString()), JSON_PRETTY_PRINT);
 
+        file_put_contents($file, $code."-----\n" . $jsonResult);
+
         $this->assertEquals(
             CodeTest::canonicalize($expectedDump),
             CodeTest::canonicalize($jsonResult),
         );
-    }
-
-    public static function constructRenderedFromProtobuf(): Script
-    {
-        $script = new Script();
-        $script->main = $main;
-        $script->functions = $functions;
-
-        return $script;
     }
 
     public static function provideTestParseAndDump()
@@ -74,7 +67,7 @@ class PrinterProtobufTest extends TestCase
             }
 
             $contents = file_get_contents($file->getPathname());
-            yield $file->getBasename() => explode('-----', $contents);
+            yield $file->getBasename() => array_merge(explode('-----', $contents), [$file->getPathname()]);
         }
     }
 }

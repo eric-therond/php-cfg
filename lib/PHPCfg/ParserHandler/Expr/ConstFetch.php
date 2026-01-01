@@ -19,7 +19,7 @@ class ConstFetch extends ParserHandler implements Expr
 {
     public function handleExpr(Node\Expr $expr): Operand
     {
-        if ($expr->name->isUnqualified()) {
+        if ($expr->name->isFullyQualified()) {
             $lcname = strtolower($expr->name->toString());
             switch ($lcname) {
                 case 'null':
