@@ -16,28 +16,16 @@ Block#1
         name: LITERAL('var_dump')
         args[0]: TEMP(#1)
         result: TEMP(#2)
-    Expr_ConstFetch
-        nsName: LITERAL('Foo\\true')
-        name: LITERAL('true')
+    Expr_FuncCall
+        name: LITERAL('var_dump')
+        args[0]: LITERAL(true)
         result: TEMP(#3)
     Expr_FuncCall
         name: LITERAL('var_dump')
-        args[0]: TEMP(#3)
+        args[0]: LITERAL(false)
         result: TEMP(#4)
-    Expr_ConstFetch
-        nsName: LITERAL('Foo\\false')
-        name: LITERAL('false')
+    Expr_FuncCall
+        name: LITERAL('var_dump')
+        args[0]: NULL()
         result: TEMP(#5)
-    Expr_FuncCall
-        name: LITERAL('var_dump')
-        args[0]: TEMP(#5)
-        result: TEMP(#6)
-    Expr_ConstFetch
-        nsName: LITERAL('Foo\\null')
-        name: LITERAL('null')
-        result: TEMP(#7)
-    Expr_FuncCall
-        name: LITERAL('var_dump')
-        args[0]: TEMP(#7)
-        result: TEMP(#8)
     Terminal_Return

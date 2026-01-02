@@ -63,6 +63,7 @@ class CodeTest extends TestCase
             }
 
             $contents = file_get_contents($file->getPathname());
+            
             yield $file->getBasename() => array_merge(explode('-----', $contents), [$file->getPathname()]);
         }
     }
