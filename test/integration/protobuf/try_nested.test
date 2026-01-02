@@ -388,7 +388,7 @@ try {
                                     "expr": {
                                         "operand": {
                                             "literal": {
-                                                "type": "bool",
+                                                "type": "boolean",
                                                 "value": "false"
                                             }
                                         }
@@ -641,7 +641,7 @@ try {
                                                 "0": {
                                                     "operand": {
                                                         "literal": {
-                                                            "type": "bool",
+                                                            "type": "boolean",
                                                             "value": "true"
                                                         }
                                                     }
@@ -707,7 +707,7 @@ try {
                                     "expr": {
                                         "operand": {
                                             "literal": {
-                                                "type": "bool",
+                                                "type": "boolean",
                                                 "value": "true"
                                             }
                                         }

@@ -133,16 +133,11 @@ class Protobuf extends Printer
                     $literaloperand = new PBLiteral();
 
                     $value = $result["value"];
-                    if (is_int($value)) {
-                        $type = "int";
-                    } else if (is_float($value)) {
-                        $type = "float";
-                    } else if (is_bool($value)) {
-                        $type = "bool";
+                    $type = gettype($value);
+                    if (is_bool($value)) {
                         $value = $value ? "true" : "false";
                     } else {
-                        $type = "string";
-                        $value = strval($result["value"]);
+                        $value = strval($value);
                     }
 
                     $literaloperand->setType($type);
