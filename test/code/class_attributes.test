@@ -28,6 +28,7 @@ class NameOfClass5 {
 #[FooAttribute(null)]
 class NameOfClass6 {
 }
+
 -----
 Block#1
     Stmt_Class

@@ -4,6 +4,7 @@ echo match(10) {
     5 => 'bar',
     10 => 'baz' . 'buz',
 };
+
 -----
 Block#1
     Stmt_MatchTable

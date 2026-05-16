@@ -4,6 +4,7 @@ if (is_int($a) || is_float($a)) {
 	echo $a;
 }
 var_dump($a);
+
 -----
 Block#1
     Expr_FuncCall

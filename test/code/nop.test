@@ -3,6 +3,7 @@ $a = 1;
 /* foo */
 ;
 echo $a;
+
 -----
 Block#1
     Expr_Assign

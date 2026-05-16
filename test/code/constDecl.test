@@ -4,6 +4,7 @@ class C {
     const D = 3, E = 4 + 4;
 }
 var_dump(A, C::D);
+
 -----
 Block#1
     Terminal_Const

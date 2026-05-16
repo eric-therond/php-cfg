@@ -1,6 +1,7 @@
 <?php
 
 [$a, $b, [$c]] = $array;
+
 -----
 Block#1
     Expr_ArrayDimFetch

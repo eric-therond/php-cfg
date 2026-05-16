@@ -1,5 +1,6 @@
 <?php
 function foo($a) {}
+
 -----
 Block#1
     Stmt_Function

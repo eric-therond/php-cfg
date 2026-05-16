@@ -8,6 +8,7 @@ if ($a) {
     echo "c";
 }
 echo "d";
+
 -----
 Block#1
     Stmt_JumpIf

@@ -1,6 +1,7 @@
 <?php
 
 $a = $b ? $c : $d;
+
 -----
 Block#1
     Stmt_JumpIf

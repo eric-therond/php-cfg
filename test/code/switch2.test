@@ -11,6 +11,7 @@ switch ($i) {
         echo "C";
 }
 echo "D";
+
 -----
 Block#1
     Expr_BinaryOp_Equal
