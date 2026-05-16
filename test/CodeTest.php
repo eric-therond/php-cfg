@@ -41,7 +41,7 @@ class CodeTest extends TestCase
             $result = $e->getMessage();
         }
 
-        file_put_contents($file, $code."-----" . $result);
+        file_put_contents($file, $code . "-----" . $result);
 
         $this->assertEquals(
             CodeTest::canonicalize($expectedDump),
@@ -63,7 +63,7 @@ class CodeTest extends TestCase
             }
 
             $contents = file_get_contents($file->getPathname());
-            
+
             yield $file->getBasename() => array_merge(explode('-----', $contents), [$file->getPathname()]);
         }
     }
