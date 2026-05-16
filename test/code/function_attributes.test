@@ -41,3 +41,4 @@ Block#1
         name: LITERAL('foo')
         result: TEMP(#1 <VARIABLE($foo)>)
     Terminal_Return
+

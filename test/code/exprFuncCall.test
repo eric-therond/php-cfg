@@ -13,3 +13,4 @@ Block#1
         args[0]: LITERAL('some string')
         result: TEMP(#3)
     Terminal_Return
+

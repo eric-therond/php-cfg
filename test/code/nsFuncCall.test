@@ -9,3 +9,4 @@ Block#1
         name: LITERAL('call')
         result: TEMP(#1)
     Terminal_Return
+

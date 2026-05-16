@@ -56,3 +56,4 @@ Block#6
         left: LITERAL(4)
         right: LITERAL(4)
         result: TEMP(#5)
+
